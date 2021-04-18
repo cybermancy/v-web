@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ValNGOS - Valheim High Performance Server Implementation</title>
+</head>
+<body>
+
+<section class="banner"></section>
+<div class="logo-bg-hack"></div>
+<section class="desc">
+    <img class="logo" src="img/logo.webp">
+    <h4>The <img alt="Valheim" src="img/valheim.png"> MMO Server Project</h4>
+    <div class="breaker-small"></div>
+    <p>The VaLNGOS (Valheim Large Network Game Object Server Suite) is a "from scratch" open-source implementation of the Valheim game server. The project's priorities include: enabling high performance 1000+ slot servers, ease of mod scripting and third party integration, un-modded client compatibility, and community driven leadership.</p>
+
+    <div class="links">
+    <a href="https://discord.gg/5jjdMKJbFN"><img style="filter: brightness(0) invert(1);" src="img/discord.png">Discord</a>
+    <a><img src="img/github.png">Github (soon)</a>
+    <a href="https://ko-fi.com/comfysystems"><img src="img/kofi.png">Support us</a>
+    </div>
+</section>
+<section class="info">
+
+    <div class="table">
+        <div>
+        Planned Features
+        </div>
+        <ul>
+            <li>Extremely simple interface for modders. Even newbie programmers can easily create gamemodes.</li>
+            <li>Write game logic in any language by interfacing with std streams</li>
+            <li>Built in frame analysis anti-cheat</li>
+            <li>Built in spam filter (naive-bayes)</li>
+            <li>Heavily threaded, support for load balancing multiple physical machines</li>
+            <li>Written in Rust. No garbage collection. Bare metal performance.</li>
+        </ul>
+    </div>
+
+    <div class="table">
+        <div style="color: #e29332;">
+            Low Priority
+        </div>
+        <ul>
+            <li>Mob pathing</li>
+            <li>Server-side physics</li>
+        </ul>
+    </div>
+
+</section><br style="clear:both"/>
+<section class="progress">
+    <h4>Progress</h4>
+    <div class="breaker-small"></div>
+    <p>The project is currently in the research phase. We are reverse engineering the game's networking code and planning a strategy for the server pipeline. Videos demonstrating basic behavior will come soon.</p>
+    <img src="img/design.png">
+</section>
+<footer>
+    <p>Valheim and it's imagery is not owned by us. Valheim is a registered trademark of Iron Gate Studios SE.</p>
+</footer>
+
+</body>
+</html>
+
+<style>* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.progress img {
+    width: 600px;
+    margin: 20px 0;
+}
+
+.table {
+    border: 1px solid rgba(255,255,255,.1);
+    width: 450px;
+    border-radius: 3px;
+    margin: 20px;
+    display: inline-block;
+    float:left;
+}
+
+@media (max-width: 980px) {
+    .table {
+        float:initial;
+    }
+}
+
+.table div {
+    background-image: url(img/texture1.jpg);
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    color: #83e232;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul {
+    padding: 30px 40px;
+    background: rgba(28, 24, 20, 0.4);
+    color: rgba(255, 241, 218, 0.7);
+}
+
+li {
+    text-align: left;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.progress {
+    padding-bottom: 20px;
+    width: 620px;
+    margin: 0 auto 50px auto;
+    color: rgba(255, 241, 218, 0.7);
+    line-height: 27px;
+}
+
+footer {
+    padding: 50px;
+}
+
+body {
+    background-image: url(img/texture2.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    font-family: Arial,serif;
+    text-shadow: 0px 0px 10px #000;
+    background-color: #211510;
+}
+
+.banner {
+    height: 240px;
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #262626;
+}
+
+.banner:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 240px;
+    background: rgba(28, 28, 28, 0.5);
+    transition: all .3s linear;
+}
+
+.desc:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 224px;
+    left: 0;
+    right: 0;
+
+    height: 50px;
+    background-image: url(img/border.png);
+    background-position: center;
+    background-size: 1112px 33px;
+    background-repeat: repeat-x;
+    filter: brightness(60%) ;
+}
+
+.logo-bg-hack {
+    background-color: #211510;
+    background-image: url(https://assets.worldofwarcraft.com/static/components/Pane/Pane-dirtLight.18def74ed60ab9f1f4139f87349d2f79.jpg);
+    position: absolute;
+    top: 406px;
+    left:0;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.logo {
+    position: absolute;
+    top: 85px;
+    width: 300px;
+    left: calc(50% - 150px);
+}
+
+.desc {
+    margin: 300px auto 0 auto;
+    padding-bottom: 20px;
+    width: 620px;
+    border-bottom: 1px solid #4e4236;
+}
+
+.links {
+
+    margin: 50px 0;
+}
+
+.links a:before{
+    width: 16px;
+    content: " ";
+    background: red;
+}
+
+.links a {
+
+    padding: 8px 20px;
+    margin: 0 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #6d3f2b;
+    transition: all .25s cubic-bezier(.23,1,.32,1) 0s;
+
+
+
+    color: #fff1da;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.links a:first-of-type {
+    margin-left: 0;
+}
+
+.links a:last-of-type {
+    margin-left: 0;
+}
+
+.links a img {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 4px;
+}
+
+.links a:hover {
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff;
+    border-color: #959595
+}
+
+h1 {
+    font-size: 70px;
+    padding: 15px 0;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    margin: 50px 0 25px 0;
+    background: linear-gradient(#ffd269 50%, #af8965);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 img {
+    width: 100px;
+    position: relative;
+    top: 15px;
+    margin: 0 10px;
+}
+
+.desc p {
+    line-height: 28px;
+    color: rgba(255, 241, 218, 0.7);
+}
+
+.breaker-small {
+    width: 40px;
+    height: 1px;
+    margin: 20px auto 40px auto;
+    background: #31271f;
+}
+
+.info {
+    margin: 70px auto 0 auto;
+    max-width: 1000px;
+}
+
+</style>
