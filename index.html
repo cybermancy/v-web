@@ -43,12 +43,12 @@
             Planned Features
             </div>
             <ul>
-                <li>Extremely simple interface for modders. Even newbie programmers can easily create gamemodes.</li>
-                <li>Write game logic in any language by interfacing with std streams.</li>
+                <li>No Peer2Peer. All game logic runs on the server</li>
+                <li>Simple interface for modders. Write game logic in any programming language by interfacing with std streams.</li>
                 <li>Built in UDP frame analysis based anti-cheat.</li>
                 <li>Built in spam filter (naive-bayes)</li>
-                <li>Heavily threaded, with support for load balancing multiple physical machines.</li>
-                <li>Non-blocking compute pipeline, movement and world-entity UDP frames are never blocked.</li>
+                <li>Built in phasing load-balancer. Allows segmenting world zones to different threads/physical machines</li>
+                <li>Non-blocking io pipeline. Movement and world-entity UDP frames are never blocked.</li>
                 <li>Written in Rust. No garbage collection. Bare metal performance.</li>
             </ul>
         </div>
